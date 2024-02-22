@@ -19,12 +19,3 @@
 
 <hr>
 
-<?php
-
-$isVip = false;
-
-if ($isVip == true): ?>
-    <p>VIP</p>
-<?php else: ?>
-    <p>Standard</p>
-<?php endif; ?>
