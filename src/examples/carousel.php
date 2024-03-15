@@ -20,10 +20,6 @@
     $prev_picture = ($current_picture - 1 + count($slides))% count($slides);
     $next_picture = ($current_picture + 1) %count($slides);
 
-    if($prev_picture < 0 ) {
-        $current_picture = 8;
-    }
-
 ?>
 
 
