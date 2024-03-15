@@ -32,6 +32,8 @@
 <style>
     body { text-align: center;}
     img {width: 400px;}
+    h2 {color: #666666 }
+    h3 {color: #6e6e6e}
     a {text-decoration: none; font-weight: 600; font-size: 24px; padding: 4px;}
     .carousel-navigation {margin-top: 10px}
     span a:nth-child(<?=$current_picture ?>) {text-decoration: underline; }
@@ -39,8 +41,8 @@
 
 <div>
     <h1>Carousel </h1>
-    <h2 style="color: #9f9f9f">You are on a slide number <?= $current_picture ?></h2>
-    <h3 style="color: #b1b1b1"> The slide image is available at - <?= $slides[$current_picture] ?></h3>
+    <h2>You are on a slide number <?= $current_picture ?></h2>
+    <h3> The slide image is available at - <?= $slides[$current_picture] ?></h3>
 </div>
 
 <hr>
