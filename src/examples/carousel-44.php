@@ -19,6 +19,9 @@
 
     $prev_picture = ($current_picture - 1 + count($slides))% count($slides);
     $next_picture = ($current_picture + 1) %count($slides);
+
+    
+
 ?>
 
 
@@ -26,12 +29,11 @@
 
 <style>
     body { text-align: center;}
-    img {width: 400px;}
+    img {width: 20%;}
     h2 {color: #666666 }
     h3 {color: #6e6e6e}
     a {text-decoration: none; font-weight: 600; font-size: 24px; padding: 4px;}
     .carousel-navigation {margin-top: 10px}
-    span a:nth-child(<?=$current_picture ?>) {text-decoration: underline; }
 </style>
 
 <div>
@@ -43,17 +45,14 @@
 <hr>
 <br>
 <div id="carousel">
+    <img id="slide" src="<?= $slides[$current_picture-1] ?>" alt="Slide">
     <img id="slide" src="<?= $slides[$current_picture] ?>" alt="Slide">
+    <img id="slide" src="<?= $slides[$current_picture+1] ?>" alt="Slide">
+    
     <br><br>
     <div class="carousel-navigation"> 
         <a href="?img=<?=$prev_picture?>">&lt</a>
-        <span>
-            <?
-                for($img_number = 1; $img_number <= 7; $img_number++) {
-                    print ('<a href="?img='.$img_number.'">'.$img_number.'</a>'); // slide numbers are displayed using a "for" loop
-                }
-            ?>
-        </span>
+        
         <a href="?img=<?=$next_picture ?>">&gt</a>
     </div>
 </div>

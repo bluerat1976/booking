@@ -1,0 +1,49 @@
+body {
+    background-color: #f5f5ef;
+    color: #222222;
+    font-family: Arial;
+}
+
+a {color: #0770a5; font-weight: 600; text-decoration: none; padding: 4px; font-size: 22px; }
+   
+    .none {display:none;}
+    .box-sort {padding: 14px; width: 50px; border-width: 1px; border-style: solid; border-color: #c30707}
+    .sort {color: #c30707; font-size: 22px; font-weight: 600}
+/*............*/
+nav {
+    background-color: #047094;
+    padding: 20px;
+}
+nav a:first-child {
+    color: #f6f2b6;
+    text-decoration: none;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav .active {
+    text-decoration: underline;
+}
+.price {
+    color: #c30707;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+h1{
+    font-size: 38px;
+    color: #293740
+}
+.h2-color {
+    color: #00475f
+}
+h3 {
+    color: #bd0404
+}
+h4 {
+    color: #beb038;
+}
+
