@@ -1,9 +1,21 @@
 <?php
-    // Get client_name from URL (metog get)
-    // Save the name inside a text file
+    // ?name=John Doe&email=jd@example.host&age=30
 
-    if(isset($_GET['client_name'])) {
-        $client_name = $_GET['client_name'];
-    } else {
-        print("client name parameter missing");
-    }
+    $name = $_GET['name'];
+    $email = $_GET['email'];
+    $age = $_GET['age'];
+    
+    $client = [
+        'name' => $name,
+        'email' => $email,
+        'age' => $age,
+    ];
+
+
+   
+    $file = fopen("./data/client.json", "w");
+     
+    fwrite($file, json_encode($client));
+        fclose($file);
+
+
