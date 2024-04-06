@@ -8,7 +8,7 @@
         $client = [
             'name' => $_GET['name'],
             'email' => $_GET['email'],
-            'age' => $_GET['age'],
+            'age' => ($_GET['age']),
         ];   
       // var_dump('<br>'.$client);
        $file = fopen("./data/client-2.json", "w");
