@@ -1,10 +1,10 @@
 <?
-        $tours = load('tours');
+       // $tours = load('tours');
         
         // $file = fopen("./data/tours.json", "r");
         // $tours = json_decode(fread($file, 1000000), true);
         // fclose($file);
-    
+    include 'data.php';
     //-- Pagination --
 
     if(isset($_GET['page-num'])) {

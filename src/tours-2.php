@@ -2,7 +2,8 @@
 //   $file = fopen("./data/tours.json", "r");
 //   $tours = json_decode(fread($file, 1000000 ), true);
 //     fclose($file);
-  include 'data.php';
+//$tours = load('tours');
+include 'data.php';
 ?>
 
 
@@ -13,7 +14,8 @@
             <li> 
                 <h2><?=$tours[$i]['name']?></h2>
                 <div>
-                    <?=$tours[$i]['price']['amount'] ?>
+                    <?=$tours[$i]['country']?>
+                    <?=$tours[$i]['price']['ammount'] ?>
                     <?=$tours[$i]['price']['currency'] ?>
                 </div>
                 <hr>
