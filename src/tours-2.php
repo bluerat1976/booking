@@ -9,6 +9,17 @@ include 'data.php';
 
 <section>
     <h1>Tours</h1>
+
+    <!------FILTERS------------->
+    
+    <form action="/" method="post">
+        <input name="search" type="text" placeholder="Enter keyword">
+        <button>SEARCH</button>
+    </form>
+
+
+    <!-------/FILTERS------------>
+
     <ol>
         <? for($i=0; $i<count($tours); $i++) {?>
             <li> 

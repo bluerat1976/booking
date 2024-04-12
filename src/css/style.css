@@ -47,3 +47,12 @@ h4 {
     color: #beb038;
 }
 
+/* FILTERS */
+
+form {
+    border: 1px solid #666666;
+    padding: 6px;
+}
+button {
+    padding: 6px;
+}
