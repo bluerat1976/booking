@@ -1,0 +1,13 @@
+[
+    {
+        "name" :  "Montenegro - Excurcion Tour",
+        "image" : "../images/montenegro-excursion.jpg",
+        "category" : "Excursion tours",
+        "country" : "Montenegro",
+        "new" : false,
+        "price" : {
+            "ammount" : 460,
+            "currency" : "USD"
+        }
+    }
+]
