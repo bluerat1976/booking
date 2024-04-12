@@ -44,7 +44,7 @@
         }
     }
 
-    usort($tours, 'compareByPrice');
+   usort($tours, 'compareByPrice');
 
     // Переключение порядка сортировки при клике на стрелки
     if (isset($_GET['sort'])) {

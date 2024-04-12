@@ -9,8 +9,8 @@
     //$clients = load('clients');
 
     function save ($data, $name) {
-        $file = fopen(".data/{$name}.json", "w");
-        fwrite($file, json_encode($data, JSON_PRETTY_PRINT, 4));
+        $file = fopen("./data/{$name}.json", "w");
+        fwrite($file, json_encode($data, JSON_PRETTY_PRINT));
         fclose($file);
 
     }

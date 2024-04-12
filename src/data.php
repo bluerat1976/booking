@@ -58,6 +58,5 @@
         ],
     ];
 
-save($tours, 'tours.json');
+//save($tours, 'tours');
 
-?>
