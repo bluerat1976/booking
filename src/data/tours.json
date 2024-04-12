@@ -9,5 +9,18 @@
             "ammount" : 460,
             "currency" : "USD"
         }
+    },
+
+    {
+        "name" :  "Montenegro Sea Tour",
+        "image" : "../images/montenegro-sea-shore.jpg",
+        "category" : "Summer Sea Tours",
+        "country" : "Montenegro",
+        "new" : false,
+        "price" : {
+            "ammount" : 580,
+            "currency" : "USD"
+        }
     }
+
 ]

@@ -1,5 +1,9 @@
 <?
-    include 'data.php';
+        $tours = load('tours');
+        
+        // $file = fopen("./data/tours.json", "r");
+        // $tours = json_decode(fread($file, 1000000), true);
+        // fclose($file);
     
     //-- Pagination --
 
