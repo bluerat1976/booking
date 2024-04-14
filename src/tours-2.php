@@ -2,8 +2,13 @@
 //   $file = fopen("./data/tours.json", "r");
 //   $tours = json_decode(fread($file, 1000000 ), true);
 //     fclose($file);
-//$tours = load('tours');
-include 'data.php';
+    $tours = load('tours');
+    if(isset($_POST['search'])) {
+        $tours = array_filter($tours, function($tour) {
+            return similar_text($tour['name'], $_POST['search']) >=3 || $_POST['search'] == ' ';
+        });
+    }
+    $tours = array_values($tours);
 ?>
 
 
@@ -12,8 +17,8 @@ include 'data.php';
 
     <!------FILTERS------------->
     
-    <form action="/" method="post">
-        <input name="search" type="text" placeholder="Enter keyword">
+    <form action="/" method="POST">
+        <input name="search" type="text" placeholder="Enter keyword" value="<?= $_POST['search'] ?? ' ' ?>">
         <button>SEARCH</button>
     </form>
 
