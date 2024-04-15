@@ -17,7 +17,7 @@
         "country": "Swiss",
         "new": true,
         "price": {
-            "ammount": 740,
+            "ammount": 1740,
             "currency": "USD"
         }
     },
@@ -50,7 +50,7 @@
         "country": "Croatia",
         "new": false,
         "price": {
-            "ammount": 630,
+            "ammount": 1630,
             "currency": "USD"
         }
     }
