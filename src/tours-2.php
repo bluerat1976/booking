@@ -7,7 +7,7 @@
     //--------------Search by name---------------------
     if(isset($_POST['search'])) {
         $tours = array_filter($tours, function($tour) {
-            return similar_text($tour['name'], $_POST['search']) >=3 || $_POST['search'] == ' ';
+            return !(stripos($tour['name'], $_POST['search']) === false) || $_POST['search'] == ' ';
         });
     }
     $tours = array_values($tours);
@@ -15,7 +15,7 @@
     //---------Search by min and max prices-----------------
 
     // Обработка формы поиска
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST["min_price"]) || isset($_POST["max_price"])) {
     $min_price = $_POST["min_price"];
     $max_price = $_POST["max_price"];
 
@@ -25,7 +25,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         return $price >= $min_price && $price <= $max_price;
     });
 }
+
+if(isset($_POST['sort_desc'])) {
+   usort($tours, function($tour_a, $tour_b) {
+        return $tour_b['price']['ammount'] - $tour_a['price']['ammount'];
+   });
+}
+
+if(isset($_POST['sort_asc'])) {
+    usort($tours, function($tour_a, $tour_b) {
+         return $tour_a['price']['ammount'] - $tour_b['price']['ammount'];
+    });
+ }
 $tours = array_values($tours);
+
+
 ?>
 
 
@@ -43,10 +57,16 @@ $tours = array_values($tours);
 
     <!---------------------------->
         <form action="/" method="post" >
-            <input name="min_price" type="text" placeholder="Enter min price" value="<?= $_POST['min_price'] ?? ' ' ?>">
-            <input name="max_price" type="text" placeholder="Enter max price" value="<?= $_POST['max_price'] ?? ' ' ?>">
+            <input name="min_price" type="text" placeholder="Enter min price" size="6" value="<?= $_POST['min_price'] ?? ' ' ?>">
+            <input name="max_price" type="text" placeholder="Enter max price" size="6" value="<?= $_POST['max_price'] ?? ' ' ?>">
             <button>Search</button>
+            <fieldset>
+                <legend>Sort</legend>
+                <button name="sort_desc">V</button>
+                <button name="sort_asc">A</button>
+            </fieldset>
         </form>
+        
     <!-------------------------->
     <ol>
         <? for($i=0; $i<count($tours); $i++) {?>
