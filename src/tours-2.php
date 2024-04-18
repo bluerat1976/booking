@@ -76,6 +76,7 @@ $tours = array_values($tours);
                     <?=$tours[$i]['country']?>
                     <?=$tours[$i]['price']['ammount'] ?>
                     <?=$tours[$i]['price']['currency'] ?>
+                    <a href="/?page=book&id=<?=$tours[$i]['id']?>"></a>
                 </div>
                 <hr>
             </li>
