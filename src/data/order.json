@@ -1,9 +1,9 @@
 {
     "client": {
-        "full_name": "Tania",
+        "full_name": "Tania ",
         "email": "tania@gmail.com",
-        "phone_number": "12344567"
+        "phone_number": "349012345"
     },
-    "ticket_quantity": 2,
-    "tour_id": "3"
+    "ticket_quantity": 3,
+    "tour_id": "4"
 }

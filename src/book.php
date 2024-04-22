@@ -17,7 +17,7 @@
     }
     
 
-    //b) Finding thechosen tour by ID using for + if:
+    //b) Finding the chosen tour by ID using for + if:
     
     //     for ($i = 0; $i < count($tours); $i++) {
     //     if ($tours[$i]['id'] == $id) {
