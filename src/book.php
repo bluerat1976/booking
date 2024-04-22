@@ -1,9 +1,9 @@
 <?
     $tours = load('tours');
    
-    $id = $_GET['id']; // Предполагается, что id передается через GET-параметр
-
-    // Функция для фильтрации тура по id
+    $id = (int)$_GET['id']; 
+   // a) array function for filtration of chosen tour by ID:
+    
     function filterById($tour) {
         global $id;
         return $tour['id'] == $id;
@@ -15,17 +15,25 @@
         $tour = reset($filtered_tours); // Получаем первый элемент отфильтрованного массива
 
     }
-    //HW1: find the tour by ID and print its name in H2. a) array function, b) for + if
+    
 
-
+    //b) Finding thechosen tour by ID using for + if:
+    
+    //     for ($i = 0; $i < count($tours); $i++) {
+    //     if ($tours[$i]['id'] == $id) {
+    //         $tour = $tours[$i]['name'];
+    //         print $tour;
+    //         break; // Найден нужный тур, прекращаем поиск
+    //     }
+    // }
 ?>
 
-<h2>Tour name: <?= $tour['name'] ?></h2>
+<h1>Tour name: <?= $tour['name'] ?></h1>
 <h3>Country: <?= $tour['country'] ?></h3>
 <img src="<?= $tour['image'] ?>" style="width: 260px" alt="">
 
 <p style="font-weight: 700; color: green" >Price <?= (int)$tour['price']['ammount']?> <?=$tour['price']['currency'] ?></p>
-<hr>
+<br><br>
 <form action="/?page=order&id=<?= $id ?>" method="POST">
     <h2>You are booking the tour</h2>
     <label>
@@ -48,5 +56,5 @@
         </select>
     </label>
     <br>
-    <button >BOOK</button>
+    <button>BOOK</button>
 </form>
